@@ -185,3 +185,32 @@ window.onclick = function(e) {
         closeModal();
     }
 }
+
+
+
+
+// baru
+
+function openVideo(fileId) {
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("videoFrame");
+
+    iframe.src = `https://drive.google.com/file/d/${fileId}/preview`;
+    modal.style.display = "block";
+}
+
+function closeVideo() {
+    document.getElementById("videoModal").style.display = "none";
+
+    // Menghentikan video ketika modal ditutup
+    document.getElementById("videoFrame").src = "";
+}
+
+// Tutup modal saat klik area luar
+window.onclick = function(event) {
+    const modal = document.getElementById("videoModal");
+
+    if (event.target === modal) {
+        closeVideo();
+    }
+}

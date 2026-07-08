@@ -659,3 +659,100 @@ footer {
         display: none !important; /* sembunyikan tombol panah */
     }
 }
+
+
+/* coba */
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Modal Box */
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+/* Responsive iframe (16:9) */
+.modal-content iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Tombol Close */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    background: rgba(0,0,0,.6);
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .modal {
+        padding: 12px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .close {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 480px) {
+    .modal {
+        padding: 8px;
+    }
+
+    .modal-content {
+        border-radius: 8px;
+    }
+
+    .close {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
