@@ -214,3 +214,5 @@ window.onclick = function(event) {
         closeVideo();
     }
 }
+
+document.getElementById('tahun').textContent = new Date().getFullYear();

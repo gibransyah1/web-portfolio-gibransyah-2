@@ -163,6 +163,7 @@ section:nth-child(odd) {
     gap: 30px;
     flex-wrap: wrap;
 }
+
 .about p{
     margin-top: 30px; 
     text-align: left;
@@ -184,11 +185,22 @@ section:nth-child(odd) {
     flex-wrap: wrap;
 }
 
-.profile img {
+.profile .box{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    overflow: hidden;
+}
+.profile .box img{
+    width: 100%;
+}
+
+/* .profile img {
     width: 150px;
     border-radius: 50%;
     border: 3px solid #38bdf8;
-}
+} */
 
 .profile-text {
     max-width: 400px;
@@ -572,6 +584,8 @@ button {
 
 #topBtn {
     position: fixed;
+    width: 50px;
+    height: 50px;
     bottom: 20px;
     right: 20px;
     z-index: 950;
